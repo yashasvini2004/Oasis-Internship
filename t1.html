@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechTutor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #FFDEAD; /* Light Yellow */
+    }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+      background-color: #333;
+      color: #FFF;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+    }
+    header nav {
+      display: flex;
+    }
+    header nav a {
+      color: #FFF;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+    .home-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .home-section img {
+      max-width: 50%;
+      height: auto;
+    }
+    .welcome-message {
+      max-width: 50%;
+      text-align: left;
+    }
+    .headline {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .subheadline {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .cta-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 16px; /* Reduced padding */
+      background-color: #333;
+      color: #FFF;
+      font-size: 16px; /* Reduced font size */
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 0 10px;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #555;
+    }
+    .cta-button img {
+      margin-bottom: 5px; /* Reduced margin */
+    }
+    .courses-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .course-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 16px; /* Reduced padding */
+      background-color: #333;
+      color: #FFF;
+      font-size: 16px; /* Reduced font size */
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px;
+      transition: background-color 0.3s;
+    }
+    .course-button:hover {
+      background-color: #555;
+    }
+    .course-button img {
+      margin-bottom: 5px; /* Reduced margin */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>TechTutor</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Login</a>
+      <a href="#courses" class="nav-link">Courses</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="home-section">
+      <img src="tutor.png" alt="Tutor Image">
+      <div class="welcome-message">
+        <h2 class="headline">Welcome to TechTutor</h2>
+        <p class="subheadline">Empowering Your Tech Journey</p>
+        <div class="cta-buttons">
+          <a href="#courses" class="cta-button"><img src="course.png" alt="Courses Icon"> <span>Courses</span></a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="courses" class="courses-section">
+      <a href="c_page.html" class="course-button"><img src="c.png" alt="C Icon"> <span>C</span></a>
+      <a href="cpp_page.html" class="course-button"><img src="cpp.png" alt="C++ Icon"> <span>C++</span></a>
+      <a href="java_page.html" class="course-button"><img src="java.png" alt="Java Icon"> <span>Java</span></a>
+      <a href="python_page.html" class="course-button"><img src="python.png" alt="Python Icon"> <span>Python</span></a>
+      <a href="sql_page.html" class="course-button"><img src="sql.png" alt="SQL Icon"> <span>SQL</span></a>
+    </div>
+
+    <!-- Contact section -->
+    <div id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Feel free to reach out to us for any inquiries or support.</p>
+      <p>Email: info@techtutor.com</p>
+      <p>Phone: +1234567890</p>
+    </div>
+  </div>
+
+</body>
+</html>
