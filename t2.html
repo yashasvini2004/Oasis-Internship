@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yashasvini's Portfolio</title>
     <style>
-        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,168 +14,155 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
+    #header {
+        background-color: #78B098;
+        color: #fff;
+    }
 
-        /* Header Styles */
-        #header {
-            background-color: #78B098; /* Light Green */
-            color: #fff;
-        }
+    #header td {
+        padding: 15px;
+        text-align: center;
+    }
 
-        #header td {
-            padding: 15px;
-            text-align: center;
-        }
+    #header a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+    }
 
-        #header a {
-            text-decoration: none;
-            color: #000;
-            font-size: 18px;
-        }
+    #header a:hover {
+        color: #ffc107;
+    }
 
-        #header a:hover {
-            color: #ffc107; /* Yellow */
-        }
+    section {
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
 
-        /* Section Styles */
-        section {
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
+    section h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #78B098;
+        text-align: center;
+    }
 
-        section h2 {
-            font-size: 48px; /* Increased font size */
-            margin-bottom: 20px;
-            color: #78B098; /* Light Green */
-            text-align: center;
-        }
+    section p {
+        font-size: 16px;
+        color: #333;
+        text-align: center;
+    }
 
-        section p {
-            font-size: 16px;
-            color: #333;
-            text-align: center;
-        }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
 
-        /* Project List Styles */
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center; /* Align text to the center */
-        }
+    ul li {
+        font-size: 24px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
 
-        ul li {
-            font-size: 24px; /* Increased font size */
-            margin-bottom: 20px; /* Added margin between projects */
-            font-weight: bold; /* Added font weight */
-        }
+    ul li a {
+        text-decoration: none;
+        color: #000;
+        transition: color 0.3s ease;
+    }
 
-        ul li a {
-            text-decoration: none;
-            color: #000;
-            transition: color 0.3s ease;
-        }
+    ul li a:hover {
+        color: #ffc107;
+    }
 
-        ul li a:hover {
-            color: #ffc107; /* Yellow */
-        }
+    #home {
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20%;
+    }
 
-        /* Home Section Styles */
-        #home {
-            height: 100vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20%;
-        }
+    #home h2 {
+        font-size: 72px;
+        color: #78B098;
+        margin-right: 50px;
+    }
 
-        #home h2 {
-            font-size: 72px; /* Increased font size */
-            color: #78B098; /* Light Green */
-            margin-right: 50px; /* Added margin to push the image */
-        }
+    #home img {
+        max-width: 50%;
+        height: auto;
+    }
 
-        #home img {
-            max-width: 50%;
-            height: auto;
-        }
+    #about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20%;
+        height: 100vh;
+    }
 
-        /* About Section Styles */
-        #about {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20%;
-            height: 100vh; /* Set section height to fill viewport */
-        }
+    #about h2 {
+        font-size: 48px;
+        color: #78B098;
+        margin-right: 50px;
+    }
 
-        #about h2 {
-            font-size: 48px; /* Increased font size */
-            color: #78B098; /* Light Green */
-            margin-right: 50px; /* Added margin to push the image */
-        }
+    #about .profile-img {
+        max-width: 40%;
+        height: auto;
+        border-radius: 50%;
+        margin-left: 20%;
+    }
 
-        #about .profile-img {
-            max-width: 40%; /* Increased profile picture size */
-            height: auto;
-            border-radius: 50%; /* Make it circular */
-            margin-left: 20%; /* Adjust image position */
-        }
+    #projects {
+        height: 100vh;
+        background-color: transparent;
+    }
 
-        /* Projects Section Styles */
-        #projects {
-            height: 100vh;
-            background-color: transparent;
-        }
+    #projects ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
 
-        /* Center the content in the Projects section */
-        #projects ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
+    #projects h2 {
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
 
-        /* Increase font size of Projects section heading */
-        #projects h2 {
-            font-size: 60px; /* Increased font size */
-            margin-bottom: 10px; /* Reduced margin between heading and projects */
-        }
+    #internships,
+    #contact {
+        height: 100vh;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
-        /* Internships and Contact Section Styles */
-        #internships,
-        #contact {
-            height: 100vh; /* Set section height to fill viewport */
-            background-color: transparent; /* Set background color to transparent */
-            display: flex;
-            justify-content: center; /* Center the content horizontally */
-            align-items: center; /* Center the content vertically */
-            flex-direction: column; /* Align the content vertically */
-        }
+    #internships h2,
+    #contact h2 {
+        font-size: 48px;
+        color: #78B098;
+    }
 
-        #internships h2,
-        #contact h2 {
-            font-size: 48px; /* Increased font size */
-            color: #78B098; /* Light Green */
-        }
+    #internships ul,
+    #contact ul {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-        /* Center the content in Internships and Contact sections */
-        #internships ul,
-        #contact ul {
-            text-align: center;
-            margin-top: 20px; /* Added margin between heading and content */
-        }
-
-        #internships li,
-        #contact li {
-            font-size: 24px; /* Increased font size */
-            margin-bottom: 10px; /* Added margin between items */
-        }
-    </style>
+    #internships li,
+    #contact li {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+</style>
 </head>
-
 <body>
-    <!-- Header -->
     <table id="header" border="0" width="100%" cellpadding="0" cellspacing="0">
         <tr>
             <td>
@@ -185,92 +170,79 @@
                     <b>Yashasvini's Portfolio</b>
                 </font>
             </td>
-
             <td>
                 <a href="#home">Home</a>
             </td>
-
             <td>|</td>
-
             <td>
                 <a href="#about">About</a>
             </td>
-
             <td>|</td>
-
             <td>
                 <a href="#projects">Projects</a>
             </td>
-
             <td>|</td>
-
             <td>
                 <a href="#internships">Internships</a>
             </td>
-
             <td>|</td>
-
             <td>
                 <a href="#contact">Contact</a>
             </td>
         </tr>
     </table>
+<section id="home">
+    <h2>Welcome to Portfolio Website</h2>
+    <img src="folio.png" alt="Portfolio Image">
+</section>
 
-    <!-- Home -->
-    <section id="home">
-        <h2>Welcome to Portfolio Website</h2>
-        <img src="folio.png" alt="Portfolio Image">
-    </section>
+<section id="about">
+    <div>
+        <h2>About Me</h2>
+        <p>Hello! I'm Dondula Yashasvini, a passionate Computer Science and Engineering student set to graduate from Sreenidhi Institute of Science and Technology in Ghatkesar, Hyderabad. Currently serving as the Placement Coordinator at my college, I thrive on connecting talent with opportunity.</p>
+        <p>With a fervent desire to soar high and a relentless pursuit of my dreams, I am determined to carve a niche for myself in the dynamic world of software engineering. My journey in this field is fueled by curiosity, creativity, and a drive for continuous learning.</p>
+        <p>I believe in the transformative power of technology to shape the future and solve complex problems. Through hands-on experience, academic rigor, and a commitment to excellence, I am ready to contribute my skills and passion to the software industry.</p>
+        <p>Join me as I embark on this exhilarating journey towards realizing my aspirations and making a meaningful impact in the world of technology.</p>
+        <p>Let's build the future together!</p>
+    </div>
+    <img src="me.jpeg" alt="Me" class="profile-img">
+</section>
 
-    <!-- About -->
-    <section id="about">
-        <div>
-            <h2>About Me</h2>
-            <p>Hello! I'm Dondula Yashasvini, a passionate Computer Science and Engineering student set to graduate from Sreenidhi Institute of Science and Technology in Ghatkesar, Hyderabad. Currently serving as the Placement Coordinator at my college, I thrive on connecting talent with opportunity.</p>
-            <p>With a fervent desire to soar high and a relentless pursuit of my dreams, I am determined to carve a niche for myself in the dynamic world of software engineering. My journey in this field is fueled by curiosity, creativity, and a drive for continuous learning.</p>
-            <p>I believe in the transformative power of technology to shape the future and solve complex problems. Through hands-on experience, academic rigor, and a commitment to excellence, I am ready to contribute my skills and passion to the software industry.</p>
-            <p>Join me as I embark on this exhilarating journey towards realizing my aspirations and making a meaningful impact in the world of technology.</p>
-            <p>Let's build the future together!</p>
-        </div>
-        <img src="me.jpeg" alt="Me" class="profile-img">
-    </section>
+<section id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><a href="#">Portfolio Website (This one!)</a></li>
+        <li><a href="#">Calorie Burnt Prediction System</a></li>
+        <li><a href="#">SIH - Mobile Application to Identify Slow Learners for Remedial Teaching and Capacity Building</a></li>
+        <li><a href="#">Plagiarism Detection</a></li>
+        <li><a href="#">Blood Donation Database Management System</a></li>
+        <li><a href="#">Hotel Management System (OOAD)</a></li>
+    </ul>
+</section>
 
-    <!-- Projects -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="#">Portfolio Website (This one!)</a></li>
-            <li><a href="#">Calorie Burnt Prediction System</a></li>
-            <li><a href="#">SIH - Mobile Application to Identify Slow Learners for Remedial Teaching and Capacity Building</a></li>
-            <li><a href="#">Plagiarism Detection</a></li>
-            <li><a href="#">Blood Donation Database Management System</a></li>
-            <li><a href="#">Hotel Management System (OOAD)</a></li>
-            <!-- Add more projects as needed -->
-        </ul>
-    </section>
+<section id="internships">
+    <h2>Internships</h2>
+    <ul>
+        <li><b>AWS Data Engineering Virtual internship :</b> September - November 2023</li><br><br>
+        <li><b>AWS Cloud Architecture Virtual Internship :</b> January - March 2024</li><br><br>
+        <li><b>Centle :</b> April - Present</li>
+    </ul>
+</section>
 
-    <!-- Internships -->
-    <section id="internships">
-        <h2>Internships</h2>
-        <ul>
-            <li><b>AWS Data Engineering Virtual internship :</b> September - November 2023</li><br><br>
-            <li><b>AWS Cloud Architecture Virtual Internship :</b> January - March 2024</li><br><br>
-            <li><b>Centle :</b> April - Present</li>
-            <!-- Add more internships as needed -->
-        </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li><b>Email:</b> yashasviniyashu2004@gmail.com</li><br><br>
-            <li><b>Phone:</b> 9515837078</li><br><br>
-            <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yashasvini-dondula/">www.linkedin.com/in/yashasvini-dondula</a></li><br><br>
-            <li><b>GitHub:</b> <a href="https://github.com/yashasvini2004">https://github.com/yashasvini2004</a></li><br><br>
-        </ul>
-    </section>
-
+<section id="contact">
+    <h2>Contact</h2>
+    <ul>
+        <li><b>Email:</b> yashasviniyashu2004@gmail.com</li><br><br>
+        <li><b>Phone:</b> 9515837078</li><br><br>
+        <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yashasvini-dondula/">www.linkedin.com/in/yashasvini-dondula</a></li><br><br>
+        <li><b>GitHub:</b> <a href="https://github.com/yashasvini2004">https://github.com/yashasvini2004</a></li><br><br>
+    </ul>
+</section>
 </body>
-
 </html>
+
+
+
+
+
+
